@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DB Fried - Coming Soon</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: rgb(158, 2, 51);
+      --accent-color: #ffae00;
+      --text-color: #f5e3d2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero img.logo {
+      max-width: 200px;
+      margin-bottom: 1.5rem;
+      animation: popIn 1s ease-out;
+      border-radius: 50%;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .material-icons {
+      vertical-align: middle;
+      font-size: 2rem;
+      margin-right: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    .notify {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    .notify input {
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .notify button {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      background-color: var(--accent-color);
+      color: #fff;
+      border-radius: 0 4px 4px 0;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .notify button:hover {
+      background-color: #e09400;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .notify input {
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+      }
+      .notify button {
+        width: 100%;
+        border-radius: 4px;
+      }
+      .notify {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero">
+    <img src="image/DB-Fried-LOGO.jpeg" alt="DB Fried Logo" class="logo" />
+    <h1><span class="material-icons">whatshot</span> DB Fried is Coming Soon!</h1>
+    <p>Get ready to experience the crispiest, juiciest fried chicken right at your doorstep. Our e-commerce shop is on its way!</p>
+    <div class="notify">
+      <input type="email" placeholder="Enter your email" />
+      <button>Notify Me</button>
+    </div>
+  </div>
+</body>
+
+</html>
