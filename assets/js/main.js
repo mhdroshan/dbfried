@@ -674,6 +674,7 @@
             let $input = $(this).prev("input.qty");
             let val = parseInt($input.val(), 10); // Specify base 10
             $input.val(val + 1).change();
+            updateWhatsAppLink();
         });
 
         $(".quantity").on("click", ".minus", function (e) {
@@ -681,8 +682,45 @@
             const val = parseInt($input.val(), 10); // Specify base 10
             if (val > 0) {
                 $input.val(val - 1).change();
+                updateWhatsAppLink();
             }
         });
+        
+        // Function to update WhatsApp link with product quantity
+        function updateWhatsAppLink() {
+            let quantity = $(".qty").val();
+            let productName = $(".product-details-content h3").text();
+            let baseUrl = "https://wa.me/919744894940?text=";
+            let message = encodeURIComponent("I would like to order " + productName + ". Quantity: " + quantity);
+            $(".whatsapp-order").attr("href", baseUrl + message);
+        }
+        
+        // Initialize WhatsApp link on page load
+        $(document).ready(function() {
+            updateWhatsAppLink();
+            updateWhatsAppLink2();
+        });
+        
+        // Function to update WhatsApp link for shop-single-2.html
+        function updateWhatsAppLink2() {
+            $("#qty2").on("change", function() {
+                let quantity = $(this).val();
+                let productName = "Whopper Burger King";
+                let baseUrl = "https://wa.me/919744894940?text=";
+                let message = encodeURIComponent("I would like to order " + productName + ". Quantity: " + quantity);
+                $(".whatsapp-order-2").attr("href", baseUrl + message);
+            });
+            
+            $(".qtyplus, .qtyminus").on("click", function() {
+                setTimeout(function() {
+                    let quantity = $("#qty2").val();
+                    let productName = "Whopper Burger King";
+                    let baseUrl = "https://wa.me/919744894940?text=";
+                    let message = encodeURIComponent("I would like to order " + productName + ". Quantity: " + quantity);
+                    $(".whatsapp-order-2").attr("href", baseUrl + message);
+                }, 100);
+            });
+        }
 
         //>> Quantity Cart Js Start <<//
         let quantity = 0;
