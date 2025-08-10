@@ -13879,7 +13879,11 @@ p.sticky-label {
   font-size: 20px;
   text-transform: capitalize;
 }
-
+.footer-widgets-wrapper .single-footer-widget .footer-address-text h6 p{
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+}
 .footer-widgets-wrapper .single-footer-widget .footer-address-text h6 span {
   color: var(--theme2);
 }
