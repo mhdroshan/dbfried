@@ -1407,7 +1407,10 @@ input.main-search-input::placeholder {
   justify-content: space-between;
   padding: 10px 0;
 }
+.logo img{
+  max-height: 72px;
 
+}
 .header-main .main-menu ul {
   margin-bottom: 0;
 }
@@ -2293,7 +2296,10 @@ input.main-search-input::placeholder {
 .offcanvas__wrapper .offcanvas__content .text {
   color: var(--text);
 }
-
+.offcanvas__wrapper .offcanvas__content .text span{
+  color: var(--theme2);
+  font-weight: 500;
+}
 .offcanvas__wrapper .offcanvas__content .offcanvas-gallery-area {
   margin-top: 30px;
 }
@@ -11552,6 +11558,7 @@ input.main-search-input::placeholder {
 .brand-wrapper .brand-image img {
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  width: 100%;
 }
 
 .brand-wrapper .brand-image img:hover {
@@ -13775,6 +13782,9 @@ p.sticky-label {
 .footer-widgets-wrapper .single-footer-widget .widget-head h4 {
   text-transform: capitalize;
   margin-top: 10px;
+}
+.footer-widgets-wrapper .single-footer-widget .widget-head img{
+  max-height: 72px;
 }
 
 .footer-widgets-wrapper .single-footer-widget .footer-content span {
