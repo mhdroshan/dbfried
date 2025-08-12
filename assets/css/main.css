@@ -11561,18 +11561,24 @@ input.main-search-input::placeholder {
   width: 100%;
 }
 
-.brand-wrapper .brand-image img:hover {
+/* .brand-wrapper .brand-image img:hover {
   filter: brightness(50%) grayscale(100%) contrast(150%);
-}
+} */
 
 .brand-wrapper .swiper-wrapper {
   align-items: center;
 }
 
-.brand-wrapper .swiper-slide.swiper-slide-active .brand-image img {
+/* .brand-wrapper .swiper-slide.swiper-slide-active .brand-image img {
   filter: brightness(50%) grayscale(100%) contrast(150%);
+} */
+@media (max-width: 575px) {
+  .brand-wrapper .brand-image img{
+    max-width: 50%;
+  }
 }
 
+.brand-wrapper .brand-image img
 .single-news-items {
   margin-top: 30px;
   overflow: hidden;
