@@ -1001,9 +1001,11 @@
 
     function loader() {
         $(window).on('load', function () {
-            // Animate loader off screen
-            $(".preloader").addClass('loaded');
-            $(".preloader").delay(600).fadeOut();
+            // Keep preloader visible for 2 seconds, then hide
+            setTimeout(function () {
+                $(".preloader").addClass('loaded');
+                $(".preloader").fadeOut();
+            }, 1000);
         });
     }
     loader();
@@ -1011,3 +1013,43 @@
 
 })(jQuery); // End jQuery
 
+(function() {
+    var cta = document.getElementById('mobileStickyCta');
+    var ticking = false;
+    var lastScroll = window.scrollY || window.pageYOffset;
+
+    function onScroll() {
+        var currScroll = window.scrollY || window.pageYOffset;
+        if (window.innerWidth > 767) {
+            cta.classList.remove('show');
+            ticking = false;
+            lastScroll = currScroll;
+            return;
+        }
+        if (currScroll < 30) {
+            cta.classList.remove('show');
+        } else if (currScroll > lastScroll) {
+            // Scrolling down
+            cta.classList.add('show');
+        } else {
+            // Scrolling up or not moving
+            cta.classList.remove('show');
+        }
+        lastScroll = currScroll;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(onScroll);
+            ticking = true;
+        }
+    });
+
+    // Hide on load
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.innerWidth <= 767) {
+            cta.classList.remove('show');
+        }
+    });
+})();

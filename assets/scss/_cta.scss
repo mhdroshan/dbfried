@@ -29,6 +29,7 @@
         bottom: 15px;
         left: 0;
         z-index: 9;
+        display: none;
         -webkit-animation: scale-up-two 6s infinite linear;
         animation: scale-up-two 6s infinite linear;
 
@@ -197,6 +198,7 @@
             position: absolute;
             top: 0;
             right: 5%;
+            display: none;
             animation: 4s linear 0s infinite normal none running rounded;
         }
 
