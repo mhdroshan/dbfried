@@ -1653,6 +1653,7 @@ input.main-search-input::placeholder {
 
 .header-main .header-right .menu-cart {
   position: relative;
+  display: none;
 }
 
 @media (max-width: 1199px) {
